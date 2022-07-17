@@ -1,0 +1,8 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/mauro/Programming/Holberton/holbertonschool-binary_trees'
+gcc -g -Wall -Werror -Wextra -pedantic -std=gnu89 -o obj/0-binary_tree_node.o -c 0-binary_tree_node.c
+gcc -g -Wall -Werror -Wextra -pedantic -std=gnu89 -o obj/binary_tree_print.o -c binary_tree_print.c
+gcc -g -Wall -Werror -Wextra -pedantic -std=gnu89 -o obj/0-main.o -c 0-main.c
+gcc -g -Wall -Werror -Wextra -pedantic -std=gnu89 -o bin/0-node obj/0-binary_tree_node.o obj/binary_tree_print.o obj/0-main.o 
+make: Leaving directory '/home/mauro/Programming/Holberton/holbertonschool-binary_trees'
+ 
