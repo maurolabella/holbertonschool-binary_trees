@@ -1,17 +1,18 @@
 make --dry-run --keep-going --print-directory
 make: Entering directory '/home/mauro/Programming/Holberton/holbertonschool-binary_trees'
  
+gcc -g -Wall -Werror -Wextra -pedantic -std=gnu89 -o obj/8-binary_tree_postorder.o -c 8-binary_tree_postorder.c
 gcc -g -Wall -Werror -Wextra -pedantic -std=gnu89 -o obj/0-binary_tree_node.o -c 0-binary_tree_node.c
-gcc -g -Wall -Werror -Wextra -pedantic -std=gnu89 -o obj/4-binary_tree_is_leaf.o -c 4-binary_tree_is_leaf.c
  
+gcc -g -Wall -Werror -Wextra -pedantic -std=gnu89 -o obj/4-binary_tree_is_leaf.o -c 4-binary_tree_is_leaf.c
 gcc -g -Wall -Werror -Wextra -pedantic -std=gnu89 -o obj/6-binary_tree_preorder.o -c 6-binary_tree_preorder.c
 gcc -g -Wall -Werror -Wextra -pedantic -std=gnu89 -o obj/binary_tree_print.o -c binary_tree_print.c
 gcc -g -Wall -Werror -Wextra -pedantic -std=gnu89 -o obj/3-binary_tree_delete.o -c 3-binary_tree_delete.c
 gcc -g -Wall -Werror -Wextra -pedantic -std=gnu89 -o obj/5-binary_tree_is_root.o -c 5-binary_tree_is_root.c
 gcc -g -Wall -Werror -Wextra -pedantic -std=gnu89 -o obj/7-binary_tree_inorder.o -c 7-binary_tree_inorder.c
-gcc -g -Wall -Werror -Wextra -pedantic -std=gnu89 -o obj/7-main.o -c 7-main.c
+gcc -g -Wall -Werror -Wextra -pedantic -std=gnu89 -o obj/8-main.o -c 8-main.c
 gcc -g -Wall -Werror -Wextra -pedantic -std=gnu89 -o obj/1-binary_tree_insert_left.o -c 1-binary_tree_insert_left.c
 gcc -g -Wall -Werror -Wextra -pedantic -std=gnu89 -o obj/2-binary_tree_insert_right.o -c 2-binary_tree_insert_right.c
-gcc -g -Wall -Werror -Wextra -pedantic -std=gnu89 -o bin/7-in obj/0-binary_tree_node.o obj/4-binary_tree_is_leaf.o obj/6-binary_tree_preorder.o obj/binary_tree_print.o obj/3-binary_tree_delete.o obj/5-binary_tree_is_root.o obj/7-binary_tree_inorder.o obj/7-main.o obj/1-binary_tree_insert_left.o obj/2-binary_tree_insert_right.o 
+gcc -g -Wall -Werror -Wextra -pedantic -std=gnu89 -o bin/8-post obj/8-binary_tree_postorder.o obj/0-binary_tree_node.o obj/4-binary_tree_is_leaf.o obj/6-binary_tree_preorder.o obj/binary_tree_print.o obj/3-binary_tree_delete.o obj/5-binary_tree_is_root.o obj/7-binary_tree_inorder.o obj/8-main.o obj/1-binary_tree_insert_left.o obj/2-binary_tree_insert_right.o 
 make: Leaving directory '/home/mauro/Programming/Holberton/holbertonschool-binary_trees'
  
