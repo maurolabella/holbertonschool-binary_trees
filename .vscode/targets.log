@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Mon Jul 18 11:20:44 2022
+# Make data base, printed on Mon Jul 18 11:25:49 2022
 
 # Variables
 
@@ -63,7 +63,7 @@ SNAP_INSTANCE_NAME = code
 # environment
 SNAP_ARCH = amd64
 # makefile (from '2-binary_tree_insert_right.d', line 1)
-MAKEFILE_LIST :=  Makefile 0-binary_tree_node.d binary_tree_print.d 2-main.d 1-binary_tree_insert_left.d 2-binary_tree_insert_right.d
+MAKEFILE_LIST :=  Makefile 0-binary_tree_node.d binary_tree_print.d 3-binary_tree_delete.d 3-main.d 1-binary_tree_insert_left.d 2-binary_tree_insert_right.d
 # automatic
 @F = $(notdir $@)
 # environment
@@ -169,7 +169,6 @@ SNAP_CONTEXT = rkXmz5YR28qQotmbwSciFKnUFNKG4qXupHRMDpmB46AQS-Yz3-nS
 # automatic
 +F = $(notdir $+)
 # environment
- 
 ELECTRON_NO_ATTACH_CONSOLE = 1
 # environment
 SNAP_USER_COMMON = /home/mauro/snap/code/common
@@ -240,7 +239,7 @@ GDK_BACKEND = x11
 # environment
 LC_PAPER = en_US.UTF-8
 # makefile (from 'Makefile', line 11)
-APPNAME = bin/2-right
+APPNAME = bin/3-del
 # environment
 QT_ACCESSIBILITY = 1
 # default
@@ -277,6 +276,7 @@ CHROME_DESKTOP = code-url-handler.desktop
 WINDOWPATH = 2
 # default
 .INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
+ 
 # environment
 LC_IDENTIFICATION = en_US.UTF-8
 # default
@@ -292,7 +292,7 @@ TERM = xterm-256color
 # environment
 VSCODE_PID = 43992
 # variable set hash-table stats:
-# Load=140/1024=14%, Rehash=0, Collisions=22/205=11%
+# Load=140/1024=14%, Rehash=0, Collisions=22/207=11%
 
 # Pattern-specific Variable Values
 
@@ -300,9 +300,9 @@ VSCODE_PID = 43992
 
 # Directories
 
-# . (device 2050, inode 15073622): 20 files, no impossibilities.
+# . (device 2050, inode 15073622): 22 files, no impossibilities.
 
-# 20 files, no impossibilities in 1 directories.
+# 22 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -318,16 +318,23 @@ obj/%.o: %.c
 
 # Files
 
+# Not a target:
+3-binary_tree_delete.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-18 11:24:04.412024488
+#  File has been updated.
+#  Successfully updated.
+
 0-binary_tree_node.d: 0-binary_tree_node.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: '0-binary_tree_node'
-#  Last modified 2022-07-18 11:20:44.236667852
+#  Last modified 2022-07-18 11:25:49.409681232
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 45):
 	@$(CPP) $(CFLAGS) $< -MM -MT $(@:%.d=$(OBJDIR)/%.o) >$@
 
-all: bin/2-right
+all: bin/3-del
 #  Command line target.
 #  Implicit rule search has been done.
 #  File does not exist.
@@ -347,31 +354,34 @@ obj/2-binary_tree_insert_right.o: 2-binary_tree_insert_right.c binary_trees.h
 #  File has not been updated.
 
 # Not a target:
-2-main.c:
+3-main.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-18 11:20:11.96016463
+#  Last modified 2022-07-18 11:25:07.917033669
 #  File has been updated.
 #  Successfully updated.
 
-obj/binary_tree_print.o: binary_tree_print.c binary_trees.h
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+obj/binary_tree_print.o: binary_tree_print.c binary_tree_print.c binary_trees.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'binary_tree_print'
+#  Last modified 2022-07-18 11:20:50.568778852
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 52):
+	$(CC) $(CXXFLAGS) -o $@ -c $<
 
 2-binary_tree_insert_right.d: 2-binary_tree_insert_right.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: '2-binary_tree_insert_right'
-#  Last modified 2022-07-18 11:20:44.188667009
+#  Last modified 2022-07-18 11:25:49.357680425
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 45):
- 
 	@$(CPP) $(CFLAGS) $< -MM -MT $(@:%.d=$(OBJDIR)/%.o) >$@
 
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-18 11:20:41.952627726
+#  Last modified 2022-07-18 11:25:43.725593038
 #  File has been updated.
 #  Successfully updated.
 
@@ -382,24 +392,33 @@ Makefile:
 #  File has been updated.
 #  Successfully updated.
 
+bin/3-del: obj/0-binary_tree_node.o obj/binary_tree_print.o obj/3-binary_tree_delete.o obj/3-main.o obj/1-binary_tree_insert_left.o obj/2-binary_tree_insert_right.o
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/5=0%
+#  recipe to execute (from 'Makefile', line 41):
+	$(CC) $(CXXFLAGS) -o $@ $^ $(LDFLAGS)
+
 binary_tree_print.d: binary_tree_print.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'binary_tree_print'
-#  Last modified 2022-07-18 11:20:44.224667642
+#  Last modified 2022-07-18 11:25:49.401681107
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 45):
 	@$(CPP) $(CFLAGS) $< -MM -MT $(@:%.d=$(OBJDIR)/%.o) >$@
 
-obj/2-main.o: 2-main.c binary_trees.h
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-obj/1-binary_tree_insert_left.o: 1-binary_tree_insert_left.c binary_trees.h
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+3-binary_tree_delete.d: 3-binary_tree_delete.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: '3-binary_tree_delete'
+#  Last modified 2022-07-18 11:25:49.389680921
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 45):
+	@$(CPP) $(CFLAGS) $< -MM -MT $(@:%.d=$(OBJDIR)/%.o) >$@
 
 cleanw:
 #  Phony target (prerequisite of .PHONY).
@@ -409,10 +428,42 @@ cleanw:
 #  recipe to execute (from 'Makefile', line 69):
 	$(DEL) $(WDELOBJ) $(DEP) $(APPNAME)$(EXE)
 
-2-main.d: 2-main.c
+obj/1-binary_tree_insert_left.o: 1-binary_tree_insert_left.c binary_trees.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+obj/3-binary_tree_delete.o: 3-binary_tree_delete.c 3-binary_tree_delete.c
 #  Implicit rule search has been done.
-#  Implicit/static pattern stem: '2-main'
-#  Last modified 2022-07-18 11:20:44.21266743
+#  Implicit/static pattern stem: '3-binary_tree_delete'
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := obj/3-binary_tree_delete.o
+# automatic
+# % := 
+# automatic
+# * := 3-binary_tree_delete
+# automatic
+# + := 3-binary_tree_delete.c 3-binary_tree_delete.c
+# automatic
+# | := 
+# automatic
+# < := 3-binary_tree_delete.c
+# automatic
+# ^ := 3-binary_tree_delete.c
+# automatic
+# ? := 3-binary_tree_delete.c
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=1/15=7%
+#  recipe to execute (from 'Makefile', line 52):
+	$(CC) $(CXXFLAGS) -o $@ -c $<
+
+3-main.d: 3-main.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: '3-main'
+#  Last modified 2022-07-18 11:25:49.381680797
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 45):
@@ -420,7 +471,7 @@ cleanw:
 
 # makefile (from 'Makefile', line 35)
 release: CXXFLAGS = -Wall -02 -DNDEBUG
-release: clean bin/2-right
+release: clean bin/3-del
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -429,6 +480,11 @@ release: clean bin/2-right
 
 # Not a target:
 .DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+obj/3-main.o: 3-main.c binary_trees.h
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -459,7 +515,7 @@ binary_trees.h:
 1-binary_tree_insert_left.d: 1-binary_tree_insert_left.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: '1-binary_tree_insert_left'
-#  Last modified 2022-07-18 11:20:44.20066722
+#  Last modified 2022-07-18 11:25:49.369680611
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 45):
@@ -467,14 +523,12 @@ binary_trees.h:
 
 clean:
 #  Phony target (prerequisite of .PHONY).
- 
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 58):
 	$(RM) $(DELOBJ) $(DEP) $(APPNAME)
 
- 
 # Not a target:
 0-binary_tree_node.c:
 #  Implicit rule search has been done.
@@ -485,27 +539,9 @@ clean:
 obj/0-binary_tree_node.o: 0-binary_tree_node.c 0-binary_tree_node.c binary_trees.h
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: '0-binary_tree_node'
-#  Last modified 2022-07-17 21:58:27.634045549
+#  Last modified 2022-07-18 11:20:50.508777801
 #  File has been updated.
-#  Needs to be updated (-q is set).
-# automatic
-# @ := obj/0-binary_tree_node.o
-# automatic
-# % := 
-# automatic
-# * := 0-binary_tree_node
-# automatic
-# + := 0-binary_tree_node.c 0-binary_tree_node.c binary_trees.h
-# automatic
-# | := 
-# automatic
-# < := 0-binary_tree_node.c
-# automatic
-# ^ := 0-binary_tree_node.c binary_trees.h
-# automatic
-# ? := binary_trees.h
-# variable set hash-table stats:
-# Load=8/32=25%, Rehash=0, Collisions=1/15=7%
+#  Successfully updated.
 #  recipe to execute (from 'Makefile', line 52):
 	$(CC) $(CXXFLAGS) -o $@ -c $<
 
@@ -520,34 +556,24 @@ obj/0-binary_tree_node.o: 0-binary_tree_node.c 0-binary_tree_node.c binary_trees
 binary_tree_print.c:
 #  Implicit rule search has been done.
 #  Last modified 2022-07-18 00:37:44.077355475
+ 
 #  File has been updated.
 #  Successfully updated.
 
-bin/2-right: obj/0-binary_tree_node.o obj/binary_tree_print.o obj/2-main.o obj/1-binary_tree_insert_left.o obj/2-binary_tree_insert_right.o
-#  Implicit rule search has not been done.
-#  File does not exist.
-#  File has been updated.
-#  Needs to be updated (-q is set).
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/5=0%
-#  recipe to execute (from 'Makefile', line 41):
-	$(CC) $(CXXFLAGS) -o $@ $^ $(LDFLAGS)
-
 # files hash-table stats:
-# Load=27/1024=3%, Rehash=0, Collisions=3/98=3%
+# Load=30/1024=3%, Rehash=0, Collisions=0/112=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 45 / storage = 633 B / avg = 14 B
-# current buf: size = 8162 B / used = 633 B / count = 45 / avg = 14 B
+# strcache buffers: 1 (0) / strings = 49 / storage = 725 B / avg = 14 B
+# current buf: size = 8162 B / used = 725 B / count = 49 / avg = 14 B
 
-# strcache performance: lookups = 119 / hit rate = 62%
+# strcache performance: lookups = 136 / hit rate = 63%
 # hash-table stats:
- 
-# Load=45/8192=1%, Rehash=0, Collisions=1/119=1%
-# Finished Make data base on Mon Jul 18 11:20:44 2022
+# Load=49/8192=1%, Rehash=0, Collisions=1/136=1%
+# Finished Make data base on Mon Jul 18 11:25:49 2022
 
  
