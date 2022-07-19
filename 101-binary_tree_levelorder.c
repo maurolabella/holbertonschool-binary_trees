@@ -1,50 +1,64 @@
 #include "binary_trees.h"
 
 /**
- * _height - Measures the height of a binary tree
+ * init_queue - initializes queue
  *
- * @tree: Pointer to the node to measures the height
- *
- * Return: The height of the tree starting at @node
+ * @q: queue ruler
  */
-static size_t _height(const binary_tree_t *tree)
+static void init_queue(queue *q)
 {
-	size_t height_l;
-	size_t height_r;
-
-	height_l = tree->left ? 1 + _height(tree->left) : 0;
-	height_r = tree->right ? 1 + _height(tree->right) : 0;
-	return (height_l > height_r ? height_l : height_r);
+	q->head = NULL;
+	q->tail = NULL;
 }
 
 /**
- * binary_tree_height - measures the height of a binary tree
- * @tree: input tree
- * Return: height of tree
+ * enqueue - adds node to queue
+ *
+ * @q: queue ruler
+ * @pointer: pointer as node main value
+ * Return: int 0 in case of failure, 1 if succesful enqueue
  */
-size_t binary_tree_height(const binary_tree_t *tree)
+static int enqueue(queue *q, binary_tree_t *pointer)
 {
-	if (!tree)
+	node *newnode = malloc(sizeof(node));
+
+	if (!newnode)
 		return (0);
-	return (_height(tree));
+	newnode->pointer = pointer;
+	newnode->next = NULL;
+	/** make sure the head makes sense. */
+	if (q->head == NULL)
+		q->head = newnode;
+	/** if there is a tail, connect tail to this new node. */
+	if (q->tail != NULL)
+		q->tail->next = newnode;
+	q->tail = newnode;
+	return (1);
 }
 
 /**
- * action_at_level - executes code a given tree level recursively
- * @tree: pointer to root of tree
- * @func: function to be called on each node
- * @level: the tree depth level to print
+ * dequeue - dequeue process
+ *
+ * @q: queue ruler
+ * Return: binary_tree_t*
  */
-void action_at_level(const binary_tree_t *tree,
-										 void (*func)(int), size_t level)
+static binary_tree_t *dequeue(queue *q)
 {
-	if (!level)
-		func(tree->n);
-	else
-	{
-		action_at_level(tree->left, func, level - 1);
-		action_at_level(tree->right, func, level - 1);
-	}
+	node *tmp = NULL;
+	binary_tree_t *pointer;
+
+	/** check to see if the queue is empty */
+	if (!q->head)
+		return (NULL);
+	tmp = q->head;
+	/** save the result we are going to return */
+	pointer = tmp->pointer;
+	/** take it off */
+	q->head = q->head->next;
+	if (!q->head)
+		q->tail = NULL;
+	free(tmp);
+	return (pointer);
 }
 
 /**
@@ -55,11 +69,20 @@ void action_at_level(const binary_tree_t *tree,
  */
 void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int))
 {
-	size_t height, i;
+	queue q1;
+	binary_tree_t *t = NULL;
 
 	if (!tree || !func)
 		return;
-	height = binary_tree_height(tree);
-	for (i = 0; i <= height; i++)
-		action_at_level(tree, func, i);
+	init_queue(&q1);
+	t = (binary_tree_t*)tree;
+	enqueue(&q1, t);
+	while ((t = dequeue(&q1)) != NULL)
+	{
+		func(t->n);
+		if (t->left)
+			enqueue(&q1, t->left);
+		if (t->right)
+			enqueue(&q1, t->right);
+	}
 }
