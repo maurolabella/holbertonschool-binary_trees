@@ -2,20 +2,19 @@ make --dry-run --keep-going --print-directory
 make: Entering directory '/home/mauro/Programming/Holberton/holbertonschool-binary_trees'
  
 gcc -g -Wall -Werror -Wextra -pedantic -std=gnu89 -o obj/8-binary_tree_postorder.o -c 8-binary_tree_postorder.c
- 
 gcc -g -Wall -Werror -Wextra -pedantic -std=gnu89 -o obj/0-binary_tree_node.o -c 0-binary_tree_node.c
 gcc -g -Wall -Werror -Wextra -pedantic -std=gnu89 -o obj/6-binary_tree_preorder.o -c 6-binary_tree_preorder.c
 gcc -g -Wall -Werror -Wextra -pedantic -std=gnu89 -o obj/binary_tree_print.o -c binary_tree_print.c
 gcc -g -Wall -Werror -Wextra -pedantic -std=gnu89 -o obj/4-binary_tree_is_leaf.o -c 4-binary_tree_is_leaf.c
 gcc -g -Wall -Werror -Wextra -pedantic -std=gnu89 -o obj/3-binary_tree_delete.o -c 3-binary_tree_delete.c
+gcc -g -Wall -Werror -Wextra -pedantic -std=gnu89 -o obj/12-binary_tree_leaves.o -c 12-binary_tree_leaves.c
 gcc -g -Wall -Werror -Wextra -pedantic -std=gnu89 -o obj/5-binary_tree_is_root.o -c 5-binary_tree_is_root.c
 gcc -g -Wall -Werror -Wextra -pedantic -std=gnu89 -o obj/7-binary_tree_inorder.o -c 7-binary_tree_inorder.c
 gcc -g -Wall -Werror -Wextra -pedantic -std=gnu89 -o obj/1-binary_tree_insert_left.o -c 1-binary_tree_insert_left.c
 gcc -g -Wall -Werror -Wextra -pedantic -std=gnu89 -o obj/9-binary_tree_height.o -c 9-binary_tree_height.c
 gcc -g -Wall -Werror -Wextra -pedantic -std=gnu89 -o obj/11-binary_tree_size.o -c 11-binary_tree_size.c
-gcc -g -Wall -Werror -Wextra -pedantic -std=gnu89 -o obj/11-main.o -c 11-main.c
 gcc -g -Wall -Werror -Wextra -pedantic -std=gnu89 -o obj/10-binary_tree_depth.o -c 10-binary_tree_depth.c
 gcc -g -Wall -Werror -Wextra -pedantic -std=gnu89 -o obj/2-binary_tree_insert_right.o -c 2-binary_tree_insert_right.c
-gcc -g -Wall -Werror -Wextra -pedantic -std=gnu89 -o bin/11-size obj/8-binary_tree_postorder.o obj/0-binary_tree_node.o obj/6-binary_tree_preorder.o obj/binary_tree_print.o obj/4-binary_tree_is_leaf.o obj/3-binary_tree_delete.o obj/5-binary_tree_is_root.o obj/7-binary_tree_inorder.o obj/1-binary_tree_insert_left.o obj/9-binary_tree_height.o obj/11-binary_tree_size.o obj/11-main.o obj/10-binary_tree_depth.o obj/2-binary_tree_insert_right.o 
+gcc -g -Wall -Werror -Wextra -pedantic -std=gnu89 -o bin/12-leaves obj/8-binary_tree_postorder.o obj/0-binary_tree_node.o obj/6-binary_tree_preorder.o obj/binary_tree_print.o obj/4-binary_tree_is_leaf.o obj/3-binary_tree_delete.o obj/12-binary_tree_leaves.o obj/5-binary_tree_is_root.o obj/7-binary_tree_inorder.o obj/1-binary_tree_insert_left.o obj/9-binary_tree_height.o obj/11-binary_tree_size.o obj/10-binary_tree_depth.o obj/2-binary_tree_insert_right.o 
 make: Leaving directory '/home/mauro/Programming/Holberton/holbertonschool-binary_trees'
  

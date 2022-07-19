@@ -8,7 +8,7 @@ CXXFLAGS = -g -Wall -Werror -Wextra -pedantic -std=gnu89
 LDFLAGS = 
 
 # Makefile settings - Can be customized.
-APPNAME = bin/11-size
+APPNAME = bin/12-leaves
 EXT = .c
 SRCDIR = .
 OBJDIR = ./obj
