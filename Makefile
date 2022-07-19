@@ -8,7 +8,7 @@ CXXFLAGS = -g -Wall -Werror -Wextra -pedantic -std=gnu89
 LDFLAGS = 
 
 # Makefile settings - Can be customized.
-APPNAME = bin/15-full
+APPNAME = bin/16-perfect
 EXT = .c
 SRCDIR = .
 OBJDIR = ./obj
@@ -72,3 +72,4 @@ cleanw:
 .PHONY: cleandepw
 cleandepw:
 	$(DEL) $(DEP)
+	
