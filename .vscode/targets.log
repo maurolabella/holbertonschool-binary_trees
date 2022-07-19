@@ -1,16 +1,18 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # GNU Make 4.2.1
+ 
 # Built for x86_64-pc-linux-gnu
+ 
 # Copyright (C) 1988-2016 Free Software Foundation, Inc.
 # License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
+ 
 
-# Make data base, printed on Mon Jul 18 22:53:50 2022
+# Make data base, printed on Mon Jul 18 23:13:46 2022
 
 # Variables
 
- 
 # 'override' directive
 GNUMAKEFLAGS := 
 # automatic
@@ -64,7 +66,7 @@ SNAP_INSTANCE_NAME = code
 # environment
 SNAP_ARCH = amd64
 # makefile (from '2-binary_tree_insert_right.d', line 1)
-MAKEFILE_LIST :=  Makefile 8-binary_tree_postorder.d 0-binary_tree_node.d 6-binary_tree_preorder.d binary_tree_print.d 4-binary_tree_is_leaf.d 3-binary_tree_delete.d 9-binary_tree_height.d 12-binary_tree_leaves.d 5-binary_tree_is_root.d 13-main.d 7-binary_tree_inorder.d 1-binary_tree_insert_left.d 13-binary_tree_nodes.d 11-binary_tree_size.d 10-binary_tree_depth.d 2-binary_tree_insert_right.d
+MAKEFILE_LIST :=  Makefile 14-binary_tree_balance.d 8-binary_tree_postorder.d 14-main.d 0-binary_tree_node.d 6-binary_tree_preorder.d binary_tree_print.d 4-binary_tree_is_leaf.d 3-binary_tree_delete.d 12-binary_tree_leaves.d 5-binary_tree_is_root.d 7-binary_tree_inorder.d 1-binary_tree_insert_left.d 13-binary_tree_nodes.d 9-binary_tree_height.d 11-binary_tree_size.d 10-binary_tree_depth.d 2-binary_tree_insert_right.d
 # automatic
 @F = $(notdir $@)
 # environment
@@ -109,6 +111,7 @@ GDK_PIXBUF_MODULE_FILE = /home/mauro/snap/code/common/.cache/gdk-pixbuf-loaders.
 SNAP = /snap/code/101
 # environment
 SNAP_VERSION = b06ae3b2
+ 
 # environment
 XDG_MENU_PREFIX = gnome-
 # environment
@@ -128,7 +131,6 @@ LS_COLORS = rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:
 # environment
 XDG_SESSION_DESKTOP = ubuntu
 # environment
- 
 SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
 # makefile (from 'Makefile', line 13)
 SRCDIR = .
@@ -192,6 +194,7 @@ MAKE = $(MAKE_COMMAND)
 MAKECMDGOALS := all
 # environment
 QT_IM_MODULE = ibus
+ 
 # environment
 SNAP_USER_DATA = /home/mauro/snap/code/101
 # environment
@@ -225,7 +228,6 @@ OLDPWD = /home/mauro/Programming/Holberton
 # automatic
 *F = $(notdir $*)
 # environment
- 
 VSCODE_IPC_HOOK = /run/user/1000/vscode-ab612523-1.69.1-main.sock
 # makefile (from 'Makefile', line 12)
 EXT = .c
@@ -242,7 +244,7 @@ GDK_BACKEND = x11
 # environment
 LC_PAPER = en_US.UTF-8
 # makefile (from 'Makefile', line 11)
-APPNAME = bin/13-nodes
+APPNAME = bin/14-balance
 # environment
 QT_ACCESSIBILITY = 1
 # default
@@ -294,18 +296,18 @@ TERM = xterm-256color
 # environment
 VSCODE_PID = 43992
 # variable set hash-table stats:
- 
-# Load=140/1024=14%, Rehash=0, Collisions=22/227=10%
+# Load=140/1024=14%, Rehash=0, Collisions=22/229=10%
 
 # Pattern-specific Variable Values
+ 
 
 # No pattern-specific variable values.
 
 # Directories
 
-# . (device 2050, inode 15073622): 42 files, no impossibilities.
+# . (device 2050, inode 15073622): 44 files, no impossibilities.
 
-# 42 files, no impossibilities in 1 directories.
+# 44 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -331,7 +333,7 @@ obj/%.o: %.c
 6-binary_tree_preorder.d: 6-binary_tree_preorder.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: '6-binary_tree_preorder'
-#  Last modified 2022-07-18 22:53:50.327054798
+#  Last modified 2022-07-18 23:13:45.802589429
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 45):
@@ -340,7 +342,6 @@ obj/%.o: %.c
 obj/7-binary_tree_inorder.o: 7-binary_tree_inorder.c binary_trees.h
 #  Implicit rule search has not been done.
 #  Modification time never checked.
- 
 #  File has not been updated.
 
 obj/13-binary_tree_nodes.o: 13-binary_tree_nodes.c binary_trees.h
@@ -351,13 +352,13 @@ obj/13-binary_tree_nodes.o: 13-binary_tree_nodes.c binary_trees.h
 0-binary_tree_node.d: 0-binary_tree_node.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: '0-binary_tree_node'
-#  Last modified 2022-07-18 22:53:50.355055144
+#  Last modified 2022-07-18 23:13:45.830589801
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 45):
 	@$(CPP) $(CFLAGS) $< -MM -MT $(@:%.d=$(OBJDIR)/%.o) >$@
 
-all: bin/13-nodes
+all: bin/14-balance
 #  Command line target.
 #  Implicit rule search has been done.
 #  File does not exist.
@@ -365,6 +366,11 @@ all: bin/13-nodes
 #  Needs to be updated (-q is set).
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/5=0%
+
+obj/14-main.o: 14-main.c binary_trees.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 7-binary_tree_inorder.c:
@@ -385,7 +391,6 @@ obj/2-binary_tree_insert_right.o: 2-binary_tree_insert_right.c binary_trees.h
 
 # Not a target:
 12-binary_tree_leaves.c:
- 
 #  Implicit rule search has been done.
 #  Last modified 2022-07-18 22:43:21.799932989
 #  File has been updated.
@@ -394,39 +399,16 @@ obj/2-binary_tree_insert_right.o: 2-binary_tree_insert_right.c binary_trees.h
 4-binary_tree_is_leaf.d: 4-binary_tree_is_leaf.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: '4-binary_tree_is_leaf'
-#  Last modified 2022-07-18 22:53:50.339054946
+#  Last modified 2022-07-18 23:13:45.818589642
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 45):
 	@$(CPP) $(CFLAGS) $< -MM -MT $(@:%.d=$(OBJDIR)/%.o) >$@
 
-obj/8-binary_tree_postorder.o: 8-binary_tree_postorder.c 8-binary_tree_postorder.c binary_trees.h
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: '8-binary_tree_postorder'
-#  Last modified 2022-07-18 22:45:19.201129029
-#  File has been updated.
-#  Needs to be updated (-q is set).
-# automatic
-# @ := obj/8-binary_tree_postorder.o
- 
-# automatic
-# % := 
-# automatic
-# * := 8-binary_tree_postorder
-# automatic
-# + := 8-binary_tree_postorder.c 8-binary_tree_postorder.c binary_trees.h
-# automatic
-# | := 
-# automatic
-# < := 8-binary_tree_postorder.c
-# automatic
-# ^ := 8-binary_tree_postorder.c binary_trees.h
-# automatic
-# ? := binary_trees.h
-# variable set hash-table stats:
-# Load=8/32=25%, Rehash=0, Collisions=1/15=7%
-#  recipe to execute (from 'Makefile', line 52):
-	$(CC) $(CXXFLAGS) -o $@ -c $<
+obj/8-binary_tree_postorder.o: 8-binary_tree_postorder.c binary_trees.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 obj/11-binary_tree_size.o: 11-binary_tree_size.c binary_trees.h
 #  Implicit rule search has not been done.
@@ -438,21 +420,10 @@ obj/binary_tree_print.o: binary_tree_print.c binary_trees.h
 #  Modification time never checked.
 #  File has not been updated.
 
-bin/13-nodes: obj/8-binary_tree_postorder.o obj/0-binary_tree_node.o obj/6-binary_tree_preorder.o obj/binary_tree_print.o obj/4-binary_tree_is_leaf.o obj/3-binary_tree_delete.o obj/9-binary_tree_height.o obj/12-binary_tree_leaves.o obj/5-binary_tree_is_root.o obj/13-main.o obj/7-binary_tree_inorder.o obj/1-binary_tree_insert_left.o obj/13-binary_tree_nodes.o obj/11-binary_tree_size.o obj/10-binary_tree_depth.o obj/2-binary_tree_insert_right.o
-#  Implicit rule search has not been done.
-#  File does not exist.
-#  File has been updated.
-#  Needs to be updated (-q is set).
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/5=0%
-#  recipe to execute (from 'Makefile', line 41):
-	$(CC) $(CXXFLAGS) -o $@ $^ $(LDFLAGS)
-
 9-binary_tree_height.d: 9-binary_tree_height.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: '9-binary_tree_height'
- 
-#  Last modified 2022-07-18 22:53:50.227053563
+#  Last modified 2022-07-18 23:13:45.714588258
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 45):
@@ -461,8 +432,9 @@ bin/13-nodes: obj/8-binary_tree_postorder.o obj/0-binary_tree_node.o obj/6-binar
 13-binary_tree_nodes.d: 13-binary_tree_nodes.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: '13-binary_tree_nodes'
-#  Last modified 2022-07-18 22:53:50.235053662
+#  Last modified 2022-07-18 23:13:45.726588418
 #  File has been updated.
+ 
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 45):
 	@$(CPP) $(CFLAGS) $< -MM -MT $(@:%.d=$(OBJDIR)/%.o) >$@
@@ -470,7 +442,7 @@ bin/13-nodes: obj/8-binary_tree_postorder.o obj/0-binary_tree_node.o obj/6-binar
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-18 22:53:46.32300537
+#  Last modified 2022-07-18 23:13:43.206554903
 #  File has been updated.
 #  Successfully updated.
 
@@ -480,6 +452,15 @@ Makefile:
 #  Last modified 2022-07-17 21:58:08.03374434
 #  File has been updated.
 #  Successfully updated.
+
+14-main.d: 14-main.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: '14-main'
+#  Last modified 2022-07-18 23:13:45.686587886
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 45):
+	@$(CPP) $(CFLAGS) $< -MM -MT $(@:%.d=$(OBJDIR)/%.o) >$@
 
 # Not a target:
 5-binary_tree_is_root.c:
@@ -491,17 +472,16 @@ Makefile:
 binary_tree_print.d: binary_tree_print.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'binary_tree_print'
-#  Last modified 2022-07-18 22:53:50.31505465
+#  Last modified 2022-07-18 23:13:45.794589322
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 45):
- 
 	@$(CPP) $(CFLAGS) $< -MM -MT $(@:%.d=$(OBJDIR)/%.o) >$@
 
 2-binary_tree_insert_right.d: 2-binary_tree_insert_right.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: '2-binary_tree_insert_right'
-#  Last modified 2022-07-18 22:53:50.191053119
+#  Last modified 2022-07-18 23:13:45.662587567
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 45):
@@ -527,6 +507,13 @@ obj/12-binary_tree_leaves.o: 12-binary_tree_leaves.c binary_trees.h
 #  Successfully updated.
 
 # Not a target:
+14-binary_tree_balance.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-18 23:12:24.981515218
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
 10-binary_tree_depth.c:
 #  Implicit rule search has been done.
 #  Last modified 2022-07-18 13:22:44.829877587
@@ -534,10 +521,9 @@ obj/12-binary_tree_leaves.o: 12-binary_tree_leaves.c binary_trees.h
 #  Successfully updated.
 
 11-binary_tree_size.d: 11-binary_tree_size.c
- 
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: '11-binary_tree_size'
-#  Last modified 2022-07-18 22:53:50.215053415
+#  Last modified 2022-07-18 23:13:45.702588099
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 45):
@@ -546,7 +532,7 @@ obj/12-binary_tree_leaves.o: 12-binary_tree_leaves.c binary_trees.h
 3-binary_tree_delete.d: 3-binary_tree_delete.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: '3-binary_tree_delete'
-#  Last modified 2022-07-18 22:53:50.303054502
+#  Last modified 2022-07-18 23:13:45.778589109
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 45):
@@ -573,33 +559,63 @@ obj/1-binary_tree_insert_left.o: 1-binary_tree_insert_left.c binary_trees.h
 7-binary_tree_inorder.d: 7-binary_tree_inorder.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: '7-binary_tree_inorder'
-#  Last modified 2022-07-18 22:53:50.255053909
+#  Last modified 2022-07-18 23:13:45.746588684
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 45):
 	@$(CPP) $(CFLAGS) $< -MM -MT $(@:%.d=$(OBJDIR)/%.o) >$@
+
+bin/14-balance: obj/14-binary_tree_balance.o obj/8-binary_tree_postorder.o obj/14-main.o obj/0-binary_tree_node.o obj/6-binary_tree_preorder.o obj/binary_tree_print.o obj/4-binary_tree_is_leaf.o obj/3-binary_tree_delete.o obj/12-binary_tree_leaves.o obj/5-binary_tree_is_root.o obj/7-binary_tree_inorder.o obj/1-binary_tree_insert_left.o obj/13-binary_tree_nodes.o obj/9-binary_tree_height.o obj/11-binary_tree_size.o obj/10-binary_tree_depth.o obj/2-binary_tree_insert_right.o
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/5=0%
+#  recipe to execute (from 'Makefile', line 41):
+	$(CC) $(CXXFLAGS) -o $@ $^ $(LDFLAGS)
 
 obj/3-binary_tree_delete.o: 3-binary_tree_delete.c binary_trees.h
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
- 
 
 12-binary_tree_leaves.d: 12-binary_tree_leaves.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: '12-binary_tree_leaves'
-#  Last modified 2022-07-18 22:53:50.291054354
+#  Last modified 2022-07-18 23:13:45.770589004
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 45):
 	@$(CPP) $(CFLAGS) $< -MM -MT $(@:%.d=$(OBJDIR)/%.o) >$@
 
-# Not a target:
-13-main.c:
+obj/14-binary_tree_balance.o: 14-binary_tree_balance.c 14-binary_tree_balance.c binary_trees.h
 #  Implicit rule search has been done.
-#  Last modified 2022-07-18 22:53:27.926778704
+#  Implicit/static pattern stem: '14-binary_tree_balance'
+#  File does not exist.
 #  File has been updated.
-#  Successfully updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := obj/14-binary_tree_balance.o
+# automatic
+# % := 
+# automatic
+# * := 14-binary_tree_balance
+# automatic
+# + := 14-binary_tree_balance.c 14-binary_tree_balance.c binary_trees.h
+# automatic
+# | := 
+# automatic
+# < := 14-binary_tree_balance.c
+# automatic
+# ^ := 14-binary_tree_balance.c binary_trees.h
+# automatic
+ 
+# ? := 14-binary_tree_balance.c binary_trees.h
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=1/15=7%
+#  recipe to execute (from 'Makefile', line 52):
+	$(CC) $(CXXFLAGS) -o $@ -c $<
 
 obj/10-binary_tree_depth.o: 10-binary_tree_depth.c binary_trees.h
 #  Implicit rule search has not been done.
@@ -608,7 +624,7 @@ obj/10-binary_tree_depth.o: 10-binary_tree_depth.c binary_trees.h
 
 # makefile (from 'Makefile', line 35)
 release: CXXFLAGS = -Wall -02 -DNDEBUG
-release: clean bin/13-nodes
+release: clean bin/14-balance
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -626,7 +642,6 @@ cleandep:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
- 
 #  recipe to execute (from 'Makefile', line 63):
 	$(RM) $(DEP)
 
@@ -648,14 +663,14 @@ cleandepw:
 # Not a target:
 binary_trees.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-18 22:47:35.678615528
+#  Last modified 2022-07-18 22:55:09.196034821
 #  File has been updated.
 #  Successfully updated.
 
 1-binary_tree_insert_left.d: 1-binary_tree_insert_left.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: '1-binary_tree_insert_left'
-#  Last modified 2022-07-18 22:53:50.24705381
+#  Last modified 2022-07-18 23:13:45.738588578
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 45):
@@ -667,10 +682,9 @@ obj/4-binary_tree_is_leaf.o: 4-binary_tree_is_leaf.c binary_trees.h
 #  File has not been updated.
 
 5-binary_tree_is_root.d: 5-binary_tree_is_root.c
- 
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: '5-binary_tree_is_root'
-#  Last modified 2022-07-18 22:53:50.279054205
+#  Last modified 2022-07-18 23:13:45.758588844
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 45):
@@ -680,6 +694,7 @@ clean:
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
+ 
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 58):
 	$(RM) $(DELOBJ) $(DEP) $(APPNAME)
@@ -691,11 +706,6 @@ clean:
 #  File has been updated.
 #  Successfully updated.
 
-obj/13-main.o: 13-main.c binary_trees.h
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
 obj/6-binary_tree_preorder.o: 6-binary_tree_preorder.c binary_trees.h
 #  Implicit rule search has not been done.
 #  Modification time never checked.
@@ -704,7 +714,16 @@ obj/6-binary_tree_preorder.o: 6-binary_tree_preorder.c binary_trees.h
 8-binary_tree_postorder.d: 8-binary_tree_postorder.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: '8-binary_tree_postorder'
-#  Last modified 2022-07-18 22:53:50.371055341
+#  Last modified 2022-07-18 23:13:45.850590067
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 45):
+	@$(CPP) $(CFLAGS) $< -MM -MT $(@:%.d=$(OBJDIR)/%.o) >$@
+
+14-binary_tree_balance.d: 14-binary_tree_balance.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: '14-binary_tree_balance'
+#  Last modified 2022-07-18 23:13:45.870590333
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 45):
@@ -720,7 +739,7 @@ obj/6-binary_tree_preorder.o: 6-binary_tree_preorder.c binary_trees.h
 10-binary_tree_depth.d: 10-binary_tree_depth.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: '10-binary_tree_depth'
-#  Last modified 2022-07-18 22:53:50.203053267
+#  Last modified 2022-07-18 23:13:45.674587726
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 45):
@@ -728,7 +747,6 @@ obj/6-binary_tree_preorder.o: 6-binary_tree_preorder.c binary_trees.h
 
 # Not a target:
 4-binary_tree_is_leaf.c:
- 
 #  Implicit rule search has been done.
 #  Last modified 2022-07-18 11:42:41.043924445
 #  File has been updated.
@@ -751,15 +769,6 @@ obj/0-binary_tree_node.o: 0-binary_tree_node.c binary_trees.h
 #  File has been updated.
 #  Successfully updated.
 
-13-main.d: 13-main.c
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: '13-main'
-#  Last modified 2022-07-18 22:53:50.267054057
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'Makefile', line 45):
-	@$(CPP) $(CFLAGS) $< -MM -MT $(@:%.d=$(OBJDIR)/%.o) >$@
-
 # Not a target:
 13-binary_tree_nodes.c:
 #  Implicit rule search has been done.
@@ -768,27 +777,34 @@ obj/0-binary_tree_node.o: 0-binary_tree_node.c binary_trees.h
 #  Successfully updated.
 
 # Not a target:
+14-main.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-18 23:13:27.906351444
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
 binary_tree_print.c:
 #  Implicit rule search has been done.
- 
 #  Last modified 2022-07-18 00:37:44.077355475
 #  File has been updated.
 #  Successfully updated.
 
 # files hash-table stats:
-# Load=60/1024=6%, Rehash=0, Collisions=11/219=5%
+# Load=63/1024=6%, Rehash=0, Collisions=11/230=5%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 89 / storage = 1704 B / avg = 19 B
-# current buf: size = 8162 B / used = 1704 B / count = 89 / avg = 19 B
+ 
+# strcache buffers: 1 (0) / strings = 93 / storage = 1808 B / avg = 19 B
+# current buf: size = 8162 B / used = 1808 B / count = 93 / avg = 19 B
 
-# strcache performance: lookups = 251 / hit rate = 64%
+# strcache performance: lookups = 263 / hit rate = 64%
 # hash-table stats:
-# Load=89/8192=1%, Rehash=0, Collisions=1/251=0%
-# Finished Make data base on Mon Jul 18 22:53:50 2022
+# Load=93/8192=1%, Rehash=0, Collisions=1/263=0%
+# Finished Make data base on Mon Jul 18 23:13:46 2022
 
  
