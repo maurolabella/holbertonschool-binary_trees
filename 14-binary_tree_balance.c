@@ -1,7 +1,7 @@
 #include "binary_trees.h"
 
 /**
- * _height-bal - Measures the height of a binary tree
+ * _height_bal - Measures the height of a binary tree
  *
  * @tree: Pointer to the node to measures the height
  *
