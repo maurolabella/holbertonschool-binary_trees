@@ -12,12 +12,9 @@ static size_t _height_bal(const binary_tree_t *tree)
 	size_t height_l;
 	size_t height_r;
 
-	if (!tree)
-		return (0);
-
 	height_l = tree->left ? 1 + (int)_height_bal(tree->left) : 0;
 	height_r = tree->right ? 1 + (int)_height_bal(tree->right) : 0;
-	return (height_l - height_r);
+	return (height_l > height_r ? height_l : height_r);
 }
 
 /**
@@ -27,7 +24,15 @@ static size_t _height_bal(const binary_tree_t *tree)
  */
 int binary_tree_balance(const binary_tree_t *tree)
 {
+	int a, b;
+
 	if (!tree)
 		return (0);
-	return (_height_bal(tree));
+	a = (tree->left)
+					? (int)_height_bal(tree->left) + 1
+					: 0;
+	b = (tree->right)
+					? (int)_height_bal(tree->right) + 1
+					: 0;
+	return (a - b);
 }
