@@ -6,9 +6,9 @@
  * @tree: pointer to tree node
  * @min: minimum value of BST tree
  * @max: maximum value of BST tree
- * Return: true or false
+ * Return: true or false as 1 or 0 in integers.
  */
-_Bool bst_check(const binary_tree_t *tree, int min, int max)
+int bst_check(const binary_tree_t *tree, int min, int max)
 {
 	if (!tree)
 		return (1);
