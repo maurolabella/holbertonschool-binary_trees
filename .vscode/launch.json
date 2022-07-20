@@ -10,7 +10,7 @@
 									"name": "(gdb) Launch",
 									"type": "cppdbg",
 									"request": "launch",
-									"program": "${workspaceFolder}/bin/1-left",
+									"program": "${workspaceFolder}/111-bst_insert",
 									"args": [],
 									"stopAtEntry": false,
 									"cwd": "${workspaceFolder}",
