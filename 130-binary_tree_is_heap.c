@@ -29,9 +29,8 @@ int is_complete(const binary_tree_t *tree, unsigned int index, size_t size)
 		return (0);
 
 	return (is_complete(tree->left, 2 * index + 1, size) &&
-			is_complete(tree->right, 2 * index + 2, size));
+					is_complete(tree->right, 2 * index + 2, size));
 }
-
 
 /**
  * binary_tree_is_complete - checks if a binary tree is complete
@@ -50,6 +49,12 @@ int binary_tree_is_complete(const binary_tree_t *tree)
 	return (is_complete(tree, i, size));
 }
 
+/**
+ * is_heap - check for heap data structure
+ *
+ * @tree: tree root
+ * Return: int
+ */
 int is_heap(const binary_tree_t *tree)
 {
 	if (!tree->left && !tree->right)
@@ -61,7 +66,6 @@ int is_heap(const binary_tree_t *tree)
 	else
 		return (0);
 }
-
 
 /**
  * binary_tree_is_heap - checks if a binary tree is a valid Max Binary Heap
